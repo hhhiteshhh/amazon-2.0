@@ -42,13 +42,13 @@ function Header() {
             <p>{session ? `Hello,${session.user.name}` : "Sign In"}</p>
             <p className="font-extrabold  md:text-sm">Account & Lists</p>
           </div>
-          <div className="link">
+          <div className="link" onClick={() => router.push("/orders")}>
             <p>Return</p>
             <p className="font-extrabold md:text-sm">& Orders</p>
           </div>
           <div
             onClick={() => {
-              session ? router.push("/checkout") : router.push("/checkout");
+              router.push("/checkout");
             }}
             className="link relative flex items-center"
           >
